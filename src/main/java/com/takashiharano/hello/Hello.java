@@ -20,22 +20,19 @@ public class Hello {
   }
 
   /**
-   * Say Hello.
+   * Say Hello world.
    */
   public static void hello() {
-    hello(null);
+    hello("world");
   }
 
   /**
-   * Say hello.
+   * Say Hello.
    *
    * @param target
    *          target
    */
   public static void hello(String target) {
-    if (target == null) {
-      target = "world";
-    }
     System.out.println("Hello, " + target + "!");
   }
 

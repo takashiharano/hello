@@ -9,7 +9,7 @@ public class Main {
   }
 
   private static void test() {
-    Hello.hello(null);
+    Hello.hello();
     Hello.hello("Java");
   }
 
