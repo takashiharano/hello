@@ -12,11 +12,11 @@ public class Hello {
    *          The command line parameters.
    */
   public static void main(String args[]) {
-    String target = null;
-    if (args.length > 0) {
-      target = args[0];
+    if (args.length == 0) {
+      hello();
+    } else {
+      hello(args[0]);
     }
-    hello(target);
   }
 
   /**
@@ -30,7 +30,7 @@ public class Hello {
    * Say Hello.
    *
    * @param target
-   *          target
+   *          target to say hello
    */
   public static void hello(String target) {
     System.out.println("Hello, " + target + "!");
