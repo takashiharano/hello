@@ -22,8 +22,8 @@ public class Hello {
   /**
    * Say Hello world.
    */
-  public static void hello() {
-    hello("world");
+  public static String hello() {
+    return hello("world");
   }
 
   /**
@@ -32,8 +32,10 @@ public class Hello {
    * @param target
    *          target to say hello
    */
-  public static void hello(String target) {
-    System.out.println("Hello, " + target + "!");
+  public static String hello(String target) {
+    String str = "Hello, " + target + "!";
+    System.out.println(str);
+    return str;
   }
 
 }

@@ -18,6 +18,12 @@ public class Main {
     Hello.hello();
     Hello.hello("Java");
     Hello.hello(null);
+
+    String str = Hello.hello();
+    System.out.println("str = " + str);
+
+    str = Hello.hello("Duke");
+    System.out.println("str = " + str);
   }
 
 }
