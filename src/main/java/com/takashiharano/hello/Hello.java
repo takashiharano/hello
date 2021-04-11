@@ -21,6 +21,8 @@ public class Hello {
 
   /**
    * Say Hello world.
+   *
+   * @return a string
    */
   public static String hello() {
     return hello("world");
@@ -31,6 +33,7 @@ public class Hello {
    *
    * @param target
    *          target to say hello
+   * @return a string
    */
   public static String hello(String target) {
     String str = "Hello, " + target + "!";
