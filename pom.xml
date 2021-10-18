@@ -41,14 +41,12 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.0</version>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
         <configuration>
-          <archive>
-            <manifest>
-              <mainClass>com.takashiharano.hello.Hello</mainClass>
-            </manifest>
-          </archive>
+          <compilerVersion>${java.version}</compilerVersion>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
 
@@ -69,7 +67,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.2.0</version>
         <configuration>
           <author>true</author>
           <source>1.8</source>
@@ -91,12 +89,14 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
         <configuration>
-          <compilerVersion>${java.version}</compilerVersion>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <archive>
+            <manifest>
+              <mainClass>com.takashiharano.hello.Hello</mainClass>
+            </manifest>
+          </archive>
         </configuration>
       </plugin>
 
@@ -128,8 +128,6 @@
   <profiles>
     <profile>
       <id>release-sign-artifacts</id>
-      <!-- for release -->
-      <!-- mvn -DperformRelease=true deploy -->
       <activation>
         <property>
           <name>performRelease</name>
